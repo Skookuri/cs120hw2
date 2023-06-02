@@ -95,8 +95,12 @@
         transition: 0.3s;
     }
     
+    /*option {
+    	width: fit-content;
+    }
     
-    /*label {
+    
+    label {
     	text-align: right;
     }*/
     
@@ -179,11 +183,21 @@ My Favorite Foods:
 <input type="text" id="city"></input>
 <br>
 <label for="state">State: </label>
-<select id="state"></select>
+<select id="state">
+	<option value="none">--SELECT--</option>
+</select>
+<br>
+<button>Submit</button>
 </form>
 </div>
 </body>
 <script>
-
+$.getJSON("https://skookuri.github.io/cs120hw2/states.json", function(data) {
+    var arr = data;
+    arr.forEach(function(list) {
+        var newoption = $("<option>").attr("value", list.name).text(list.name);
+        $("#state").append(newoption);
+	});
+});
 </script>
 </html>
