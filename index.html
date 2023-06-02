@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>Unit 1 CSS Problem Set 2</title>
+<style>
+	body {
+    	font-family: Helvetica, sans-serif;
+    }
+    
+    h1, h2 {
+    	color: #FFFFFF;
+        margin-bottom: 30px;
+    
+    }
+    
+    ul, .formtime {
+    	border: 5px solid rgb(175,180,234);
+        display: inline-block;
+        margin: 0 auto;
+        padding: 25px;
+        
+    }
+    
+    ul li {
+    	text-align: left;
+    }
+    
+    .favfoods, td {
+    	text-align: center;
+    	
+    }
+    
+    .foodimage {
+    	background-image: url('https://c-ippin.gnst.jp/photo/report/9c/d6/11342/11342_report_title_680.jpg?1543223705');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 150px;
+        width: 200px;
+        margin-right: 10px;
+    }
+    
+    .foodinfo {
+    	display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .foodexp {
+        width: 50%;
+    }
+    
+    table {
+    	border-spacing: 0;
+        border-radius: 50px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    
+    th, td {
+    	padding: 10px;
+        border-collapse: separate;  
+    }
+    
+    tr:nth-child(odd) {
+    	background-color: rgba(175,180,234, 0.5);
+    }
+    
+    table img {
+    	width: 55%;
+        height: 55%;
+    }
+    
+     table img:hover {
+    	transform: scale(200%);
+        transition: 0.3s;
+        cursor: pointer;
+        overflow: visible;
+    }
+    
+    div {
+    	padding: 20px;
+        margin: 10px;
+    }
+    
+    div:not(.favfoods), ul {
+    	border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    
+    div:not(.favfoods, .booktable):hover, ul:hover {
+    	color: white;
+        background-color: rgb(175,180,234);
+        transition: 0.3s;
+    }
+    
+    
+    /*label {
+    	text-align: right;
+    }*/
+    
+   
+    /*.booktable:hover::before {
+    	background-color: rgb(175, 180, 234);
+    }*/
+
+</style>
+</head>
+<body>
+<h1 style="background-color: #afb4ea;">Alyssa Williams</h1>
+<div class="info">
+<p>I wanted to take this class because I thought that taking a grad level equivalent of CS 20 would be helpful in refreshing my web programming skills. I am part of the JumboCode web dev team and enjoy programming websites as a hobby. I am also planning to TA for CS20 this upcoming fall.</p>
+</div>
+
+<div class="favfoods">
+<ul>
+My Favorite Foods:
+<li>Idli Sambar</li>
+<li>Mapo Tofu</li>
+<li>Onsen Manjuu</li>
+</ul>
+</div>
+<div class="favrest">
+<p>My Favorite Restaurant: 
+	<a href="https://tworooms.jp/en/">Two Rooms Bar and Grill</a>
+    <p>I enjoy Two Rooms because of the beautiful view and the moody atmosphere of the restaurant. The food is high quality and tasty, with the best bread rolls before the main meal.</p>
+</p>
+</div>
+<div class="foodinfo">
+<div class="foodimage"></div>
+<p class="foodexp">This is the kuroyanagi onsen manjuu. The region I live in in Japan, Izu, Shizuoka, has a lot of onsens (hot springs) and onsen tourism, and alongside these onsens people can enjoy the delicious traditional Japanese sweets called manjuus. The kuroyanagi onsen manjuu is often consumed as a treat, or used as offerings for Buddhist shrines inside our houses.</p>
+</div>
+<div class="booktable">
+<p>My Favorite Books:</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Author</th>
+	<th>Summary</th>
+  </tr>
+  <tr>
+    <td>House of Leaves</td>
+    <td><img src="https://m.media-amazon.com/images/I/810pcXb+l3L._AC_UF1000,1000_QL80_.jpg" alt="House of Leaves cover"</td>
+    <td>Mark Z Danielewski</td>
+    <td>A young man finds a manuscript written by a recently deceased elderly man. The manuscript details the account of "The Navidson Records" documentary, which highlights anomalies of a house in Virginia.</td>
+  </tr>
+  <tr>
+    <td>Everyday</td>
+    <td><img src="https://deseret.brightspotcdn.com/dims4/default/cc6b453/2147483647/strip/true/crop/406x615+0+0/resize/406x615!/quality/90/?url=https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FtK62_tTmpiZ4hEcRC7gjUknuLG4%3D%2F0x0%3A406x615%2F406x615%2Ffilters%3Afocal%28203x307%3A204x308%29%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F17585034%2F1014633.jpg" alt="Everyday cover"</td>
+    <td>David Levithan</td>
+    <td>A, a person wakes up every day in a different body living a different life. A spends day after day inhabiting a different body and pretending to be the person without making any variations in their personality or life.</td>
+  </tr>
+  <tr>
+    <td>The Alchemist</td>
+	<td><img src="https://images.booksense.com/images/007/315/9780062315007.jpg" alt="The Alchemist cover"</td>
+    <td>Paulo Coelho</td>
+    <td>A boy named Santiago embarks on a journey seeking treasure in the Egyptian pyramids after having a recurring dream and on the way learns what really matters in life.</td>
+  </tr>
+  <tr>
+    <td>We Are Our Brains</td>
+    <td><img src="https://m.media-amazon.com/images/I/41A2XSsVoNL.jpg" alt="We Are Our Brains cover"</td>
+    <td>DF Swaab</td>
+    <td>A vivid account of what makes us human. Based groundbreaking new research, it is a sweeping biography of the human brain, from infancy to adulthood to old age.</td>
+  </tr>
+</table>
+</div>
+
+<div class="formtime">
+<form>
+<label for="fname">First Name: </label>
+<input type="text" id="fname"></input>
+<br>
+<label for="lname">Last Name: </label>
+<input type="text" id="lname"></input>
+<br>
+<label for="city">City: </label>
+<input type="text" id="city"></input>
+<br>
+<label for="state">State: </label>
+<select id="state"></select>
+</form>
+</div>
+</body>
+<script>
+
+</script>
+</html>
